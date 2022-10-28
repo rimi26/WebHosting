@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>4-Sub-DB-Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="option()">
+        <ion-icon name="home" style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    
+      <ion-button >
+        <ion-icon name="help-circle" style="font-size: 150%;"></ion-icon>
+        
+        
+      </ion-button>
+    
+      <ion-button (click)="addlocation()">
+        <ion-icon name="arrow-forward-outline"  style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <ion-label item-start style="margin-left: 18px;"><b>Capture Wide View</b></ion-label>
+  <ion-item>
+    <ion-label item-start>Sub-DB</ion-label>
+    <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="subdbimg"></ion-icon>
+    
+    <ion-img item-end  src={{subdb}} ></ion-img>
+  </ion-item>
+
+  <ion-item>
+    <ion-label item-start>Sub-DB inside view</ion-label>
+    <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="subdbinsideimg"></ion-icon>
+    
+    <ion-img item-end  src={{subdbinside}} ></ion-img>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked"><b>Additional Comments(If Any)</b></ion-label>
+    <ion-input placeholder="Enter Additional Comments"></ion-input>
+    
+   
+  </ion-item>
+
+</ion-content>

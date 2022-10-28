@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>New Installation</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="sendEmail()">
+        <ion-icon name="mail" style="font-size: 200%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<div id="container">
+
+  <ion-list lines="full">
+
+    <ion-item id="item" >
+      <ion-label (click)="locationDetails()">1 - LOCATION</ion-label>
+    </ion-item>
+
+   
+
+    <ion-item id="item" >
+      <ion-label  (click)="mainbreaker()">2 - MAIN BREAKER</ion-label>
+      
+    </ion-item>
+
+   
+
+    <ion-item id="item">
+      <ion-label  (click)="branchingbreaker()">3 - BRANCHING BREAKER</ion-label>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-label  >4 - EV DEDICATED PROTECTION</ion-label>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-label  >5 - EARTHING</ion-label>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-label  >6 - WIRING</ion-label>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-label  >7 - WALLBOX OR SOCKET</ion-label>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-label  >8 - SPD</ion-label>
+    </ion-item>
+
+    <ion-item id="item">
+      <ion-label  >9 - ADDITIONAL DEVICE</ion-label>
+    </ion-item>
+  
+  <ion-item id="item">
+    <ion-label  >10 - POST INSTALLATION CHECK</ion-label>
+  </ion-item>
+
+  <ion-item id="item">
+    <ion-label  >11 - FEEDBACK FORM</ion-label>
+  </ion-item>
+
+</ion-list>
+
+
+  <!-- <ion-button expand="full" fill="outline" (click)="locationDetails()">1 - LOCATION</ion-button>
+  <ion-button expand="full" fill="outline">2 - MAIN BREAKER</ion-button>
+  <ion-button expand="full" fill="outline">3 - BRANCHING BREAKER</ion-button>
+  <ion-button expand="full" fill="outline">4 - EV DEDICATED PROTECTION</ion-button>
+  <ion-button expand="full" fill="outline">5 - EARTHING</ion-button>
+  
+  <ion-button expand="full" fill="outline">6 - WIRING</ion-button>
+  <ion-button expand="full" fill="outline">7 - WALLBOX OR SOCKET</ion-button>
+  <ion-button expand="full" fill="outline">8 - SPD</ion-button>
+  <ion-button expand="full" fill="outline">9 - ADDITIONAL DEVICE</ion-button>
+  <ion-button expand="full" fill="outline">10 - POST INSTALLATION CHECK</ion-button>
+  <ion-button expand="full" fill="outline">11 - FEEDBACK FORM</ion-button> -->
+
+</div>
+
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-button (click)="homepage()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title >Phase Selection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <p style="font-size: 100%; font-weight:bolder; text-align:center">Please select Phase Type to record installation:</p><br>
+    <ion-button expand="full" (click)="onephase()">1 PHASE CHARGER</ion-button><br>
+    <ion-button expand="full" (click)="threephase()">3 PHASE CHARGER</ion-button><br>
+  </div>
+
+</ion-content>

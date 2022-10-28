@@ -1,0 +1,156 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>4-EV Dedicated Protection</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="home()">
+        <ion-icon name="home" style="font-size: 150%;"  ></ion-icon>
+        
+      </ion-button>
+    
+      <ion-button >
+        <ion-icon name="help-circle" style="font-size: 150%;"></ion-icon>
+        
+        
+      </ion-button>
+    
+      <ion-button (click)="branchingbreaker()">
+        <ion-icon name="arrow-forward-outline"  style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="container">
+
+  <br>
+  <ion-label style="margin-left: 18px;">Dedicated Protection Installation Location</ion-label>
+  <ion-list >
+    <ion-item >
+      <ion-select interface="popover" placeholder="Select"  [(ngModel)]="protection" type="text" name="protection">
+        <ion-select-option value="maindb"  >Main DB</ion-select-option>
+        <ion-select-option value="subdb"  >Sub-DB</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <div >
+  <ion-label style="margin-left: 18px;">Protection Devices</ion-label>
+  <ion-list >
+    <ion-item >
+      <ion-select interface="popover" placeholder="Select"  [(ngModel)]="protectionDevices" type="text" name="protectionDevices">
+        <ion-select-option value="RCD"  >RCD-MCB</ion-select-option>
+        <ion-select-option value="RCBO"  >RCBO</ion-select-option>
+        <ion-select-option value="GFCI"  >GFCI-MCB</ion-select-option>
+        <ion-select-option value="ELCB"  >ELCB</ion-select-option>
+        <ion-select-option value="GFCI"  >GFCI</ion-select-option>
+        
+        
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</div>
+  <br>
+
+  <div>
+
+    <ion-item>
+      <ion-label position="stacked">{{protectionDevices}} Manufacturer Name</ion-label>
+      <ion-input  placeholder="Enter Manufacturer Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">{{protectionDevices}} Product Name</ion-label>
+      <ion-input  placeholder="Enter Product Number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">{{protectionDevices}} Manufacturer Name</ion-label>
+      <ion-input  placeholder="Enter Manufacturer Name"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">{{protectionDevices}} Contact Current Rating(in Amp)</ion-label>
+      <ion-input  placeholder="(in Amp)"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">{{protectionDevices}} Leakage Current Rating(in mAmp)</ion-label>
+      <ion-input  placeholder="(in mAmp)"></ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-label style="margin-left: 18px;"> {{protectionDevices}} Trip Time(in msec)</ion-label>
+  <ion-list >
+    <ion-item >
+      <ion-select interface="popover" placeholder="Select"  [(ngModel)]="triptime" type="text" name="triptime">
+        <ion-select-option value="Instantaneous"  >Instantaneous</ion-select-option>
+        <ion-select-option value="30"  >30</ion-select-option>
+        <ion-select-option value="40"  >40</ion-select-option>
+        <ion-select-option value="100"  >100</ion-select-option>
+        <ion-select-option value="150"  >150</ion-select-option>
+        <ion-select-option value="300"  >300</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-label style="margin-left: 18px;"> {{protectionDevices}} Type</ion-label>
+  <ion-list >
+    <ion-item >
+      <ion-select interface="popover" placeholder="Select"  [(ngModel)]="type" type="text" name="type">
+        <ion-select-option value="Instantaneous"  >Instantaneous</ion-select-option>
+        <ion-select-option value="A"  >A</ion-select-option>
+        <ion-select-option value="B"  >B</ion-select-option>
+        <ion-select-option value="AC"  >AC</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-item>
+    <ion-label>Is {{protectionDevices}} dedicated(no tapping from input and output)?  </ion-label>
+    <ion-toggle  ></ion-toggle>
+    </ion-item>
+
+    <br>
+
+  <ion-label style="margin-left: 18px;"> {{protectionDevices}} Number of Poles</ion-label>
+  <ion-list >
+    <ion-item >
+      <ion-select interface="popover" placeholder="Select"  [(ngModel)]="noofpoles" type="text" name="noofpoles">
+        <ion-select-option value="1"  >1</ion-select-option>
+        <ion-select-option value="2"  >2</ion-select-option>
+        <ion-select-option value="3"  >3</ion-select-option>
+        <ion-select-option value="4"  >4</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+  <ion-label item-start style="margin-left: 18px;"><b>Capture Close-up View</b></ion-label>
+  <ion-item>
+    <ion-label item-start>Photo of Installer</ion-label>
+    <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="Image()"></ion-icon>
+    
+    <ion-img item-end  src={{image}} ></ion-img>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked"><b>Additional Comments(If Any)</b></ion-label>
+    <ion-input placeholder="Enter Additional Comments"></ion-input>
+    
+   
+  </ion-item>
+
+  </div>
+
+</ion-content>

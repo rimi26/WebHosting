@@ -1,0 +1,142 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>1-Location</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="home" style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    
+      <ion-button >
+        <ion-icon name="help-circle" style="font-size: 150%;"></ion-icon>
+        
+        
+      </ion-button>
+    
+      <ion-button (click)="addlocation()">
+        <ion-icon name="arrow-forward-outline"  style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+
+  <div id="container">
+
+    <form >
+
+      <ion-item>
+        <ion-label position="stacked">Country Name(*Mandatory)</ion-label>
+        <ion-input [(ngModel)]="country" type="text" name="country" placeholder="Select a Country"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Location Name(*Mandatory)</ion-label>
+        <ion-input [(ngModel)]="location" type="text" name="location" placeholder="Enter Location Name"></ion-input>
+      </ion-item>
+    
+     
+    
+      <ion-item>
+        <ion-label position="stacked">Detail Address</ion-label>
+        <ion-input [(ngModel)]="address" type="text" name="address" placeholder="Enter Detail Address"></ion-input>
+      </ion-item><br>
+
+      <div id="option" >
+
+      <ion-label >OR</ion-label><br><br>
+      <ion-label ><a>Get Location from Google Map</a></ion-label><br><br>
+      </div>
+
+      
+    
+      <ion-item>
+        <ion-label position="stacked">Customer Name</ion-label>
+        <ion-input [(ngModel)]="customername" type="text" name="customername" placeholder="Enter Customer Name"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Installer Name</ion-label>
+        <ion-input [(ngModel)]="installername" type="text" name="installername" placeholder="Enter Installer Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Installation Date(DD-MM-YYYY)</ion-label><br>
+        <ion-input [(ngModel)]="installationdate" type="text" name="installationdate" placeholder="DD-MM-YYYY"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Authority Name</ion-label>
+        <ion-input [(ngModel)]="authorityname" type="text" name="authorityname" placeholder="Enter Authority Name"></ion-input>
+      </ion-item>
+    
+      <br>
+      
+    
+      <ion-label style="margin-left: 18px;">Grid Supply Topology</ion-label>
+      <ion-list >
+        <ion-item >
+          <ion-select interface="popover" placeholder="Select"  [(ngModel)]="gridsupplytopology" type="text" name="gridsupplytopology">
+            <ion-select-option value="120/208"  >120/208</ion-select-option>
+            <ion-select-option value="120/240"  >120/240</ion-select-option>
+            <ion-select-option value="230/400" >230/400</ion-select-option>
+            <ion-select-option value="127/220"  >127/220</ion-select-option>
+            <ion-select-option value="220/380"  >220/380</ion-select-option>
+            <ion-select-option value="240/415"  >240/415</ion-select-option>
+            <ion-select-option value="115/230" >115/230</ion-select-option>
+            <ion-select-option value="110/220" >110/220</ion-select-option>
+            
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <br>
+
+      <ion-label item-start style="margin-left: 18px;"><b>Capture Wide View</b></ion-label>
+
+      <ion-item>
+        <ion-label item-start>AC Grid Supply</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="acgridsupply()" ></ion-icon>
+        <ion-img item-end src={{acgridsupplyImg}} > </ion-img>
+      </ion-item>
+
+      <ion-item>
+        <ion-label item-start>Exterior of Location</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="exterioroflocation()" ></ion-icon>
+        <ion-img item-end src={{exterioroflocationImg}}></ion-img>
+      </ion-item>
+
+      <ion-item>
+        <ion-label item-start>Photo of Installer</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="installerimg()"></ion-icon>
+        
+        <ion-img item-end  src={{installerImg}} ></ion-img>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><b>Additional Comments(If Any)</b></ion-label>
+        <ion-input placeholder="Enter Additional Comments"></ion-input>
+        
+       
+      </ion-item>
+     
+
+    </form>
+
+  
+  
+  
+</div>
+
+
+
+
+</ion-content>

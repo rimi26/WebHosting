@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>5-Earthing</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="home()">
+        <ion-icon name="home" style="font-size: 150%;"  ></ion-icon>
+        
+      </ion-button>
+    
+      <ion-button >
+        <ion-icon name="help-circle" style="font-size: 150%;"></ion-icon>
+        
+        
+      </ion-button>
+    
+      <ion-button (click)="wiring()">
+        <ion-icon name="arrow-forward-outline"  style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+    <form>
+
+
+      <ion-label style="margin-left: 18px;">Type of Earthing</ion-label>
+      <ion-list >
+        <ion-item >
+          <ion-select interface="popover" placeholder="Select">
+            <ion-select-option value="first">TT</ion-select-option>
+            <ion-select-option value="second">TN-S</ion-select-option>
+            <ion-select-option value="third">TN-C</ion-select-option>
+            <ion-select-option value="forth">TN-C-S</ion-select-option>
+            <ion-select-option value="fifth">IT</ion-select-option>
+            <ion-select-option value="sixth">OTHER</ion-select-option>
+           
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-label style="margin-left: 18px;">Is Earthing Line Connected to Wallbox or Socket?</ion-label>
+      <ion-list >
+        <ion-item >
+          <ion-select interface="popover" placeholder="Select">
+            <ion-select-option value="first">NO</ion-select-option>
+            <ion-select-option value="second">YES</ion-select-option>
+           
+           
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <br>
+
+      <ion-label item-start style="margin-left: 18px;"><b>Capture Wide View</b></ion-label>
+
+      <ion-item>
+        <ion-label item-start>Earthing Type</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="earthingType()"></ion-icon>
+        <ion-img item-end  src={{earthingTypeImg}}> </ion-img>
+      </ion-item>
+      <br>
+
+      <ion-item>
+        <ion-label position="stacked"><b>Addition Comments(If Any)</b></ion-label>
+        <ion-input placeholder="Enter Additional Comments" ></ion-input>
+      </ion-item>
+
+    </form>
+  </div>
+
+</ion-content>

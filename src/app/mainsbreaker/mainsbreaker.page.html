@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>2-Mains Breaker</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="list()">
+        <ion-icon name="home" style="font-size: 150%;"  ></ion-icon>
+        
+      </ion-button>
+    
+      <ion-button >
+        <ion-icon name="help-circle" style="font-size: 150%;"></ion-icon>
+        
+        
+      </ion-button>
+    
+      <ion-button (click)="branchingbreaker()">
+        <ion-icon name="arrow-forward-outline"  style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+
+    <form >
+
+      <ion-item>
+        <ion-label position="stacked">Manufacturer Name</ion-label>
+        <ion-input placeholder="Enter Manufacturer Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Product Number</ion-label>
+        <ion-input placeholder="Enter Product Number"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Currect Rating(In Amp)</ion-label>
+        <ion-input placeholder="(in Amp)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Existing Load Current(In Amp)</ion-label>
+        <ion-input placeholder="(in Amp)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Total Load Current(Existing+EVSE)(In Amp)</ion-label>
+        <ion-input placeholder="(in Amp)"></ion-input>
+      </ion-item>
+
+      <br>
+
+      <ion-label item-start style="margin-left: 18px;"><b>Capture Close-up View</b></ion-label>
+
+      <ion-item>
+        <ion-label item-start>Main Breaker</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="mainBreaker()"></ion-icon>
+        <ion-img item-end  src={{mainBreakerImg}}> </ion-img>
+      </ion-item>
+
+      <br>
+
+      <ion-label item-start style="margin-left: 18px;"><b>Capture Wide View</b></ion-label>
+
+      <ion-item>
+        <ion-label item-start>Main Distribution Board</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="mainDistributionBoard()"></ion-icon>
+        <ion-img item-end  src={{mainDistributionBoardImg}}> </ion-img>
+      </ion-item>
+
+      <ion-item>
+        <ion-label  position="stacked"><b>Addition Comments(If Any)</b></ion-label>
+        <ion-input  placeholder="Enter Addition Comments"></ion-input>
+      </ion-item>
+
+    </form>
+  </div>
+
+</ion-content>

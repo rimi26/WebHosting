@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>6-Wiring</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="home()">
+        <ion-icon name="home" style="font-size: 150%;"  ></ion-icon>
+        
+      </ion-button>
+    
+      <ion-button >
+        <ion-icon name="help-circle" style="font-size: 150%;"></ion-icon>
+        
+        
+      </ion-button>
+    
+      <ion-button (click)="wiringImgs()">
+        <ion-icon name="arrow-forward-outline"  style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+    <form>
+
+      <ion-item>
+        <ion-label position="stacked">Wire Manufacturer Name</ion-label>
+        <ion-input placeholder="Enter Manufacturer Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Wire Product Number</ion-label>
+        <ion-input  placeholder="Enter Product Number"></ion-input>
+      </ion-item>
+        <br>
+     
+      <ion-label style="margin-left: 18px;">Wallbox Current Rating(In Amp)</ion-label>
+      <ion-list >
+        <ion-item >
+          <ion-select interface="popover" placeholder="Select">
+            <ion-select-option value="first">8</ion-select-option>
+            <ion-select-option value="second">10</ion-select-option>
+            <ion-select-option value="third">12</ion-select-option>
+            <ion-select-option value="forth">15</ion-select-option>
+            <ion-select-option value="fifth">16</ion-select-option>
+            <ion-select-option value="sixth">20</ion-select-option>
+            <ion-select-option value="seventh">25</ion-select-option>
+            <ion-select-option value="eighth">30</ion-select-option>
+            <ion-select-option value="ninth">32</ion-select-option>
+            <ion-select-option value="tenth">40</ion-select-option>
+           
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-label position="stacked">Wire Length(from Main or Branching Breaker<br> to Sub-DB to Wallbox or Socket)</ion-label>
+        <ion-input  placeholder="(in meter)"></ion-input>
+      </ion-item><br><br>
+
+        <ion-label style="margin-left: 18px;">Wire Type</ion-label>
+        <ion-list >
+          <ion-item >
+            <ion-select interface="popover" placeholder="Select" >
+              <ion-select-option value="second">XLPE</ion-select-option>
+              <ion-select-option value="second">PVC</ion-select-option>
+              <ion-select-option value="third">OTHER</ion-select-option>
+              
+             
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-item>
+          <ion-label position="stacked">Wire Size </ion-label>
+          <ion-input ></ion-input>
+        </ion-item>
+          <ion-list >
+            <ion-item >
+              <ion-select interface="popover" placeholder="Select">
+                <ion-select-option value="first">Sq.mm</ion-select-option>
+                <ion-select-option value="second">AWG</ion-select-option>
+               
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+          <ion-item><a>Ref.) Recommended wire-size:-</a></ion-item>
+
+        <ion-item>
+          <ion-label>Is Wiring Dedicated(Without Joints)?</ion-label>
+          <ion-toggle></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>Is Wire Routed through conduit(No Exposed Part)?</ion-label>
+            <ion-toggle></ion-toggle>
+            </ion-item>
+          
+    
+
+      <ion-item>
+        <ion-label position="floating"><b>Addition Comments(If Any)</b></ion-label>
+        <ion-input ></ion-input>
+      </ion-item>
+
+
+    </form>
+  </div>
+
+</ion-content>

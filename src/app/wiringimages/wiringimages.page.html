@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevpage()">
+        <ion-icon name="arrow-back-outline" style="font-size: 150%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>6-Wiring Images</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="home()">
+        <ion-icon name="home" style="font-size: 150%;"  ></ion-icon>
+        
+      </ion-button>
+    
+      <ion-button >
+        <ion-icon name="help-circle" style="font-size: 150%;"></ion-icon>
+        
+        
+      </ion-button>
+    
+      <ion-button (click)="wallboxORsocket()">
+        <ion-icon name="arrow-forward-outline"  style="font-size: 150%;"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+ <div id="container">
+  <form>
+
+    <ion-label item-start style="margin-left: 18px;"><b>Capture Wide View</b></ion-label><br>
+
+      <ion-item>
+        <ion-label item-start>Wire coming out of DB</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="wireoutDB()"></ion-icon>
+        <ion-img item-end  src={{wireoutDBImg}}> </ion-img>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label item-start>Wire routing to Wallbox/Socket</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="wireroutingWallboxSocket()"></ion-icon>
+        <ion-img item-end  src={{wireroutingWallboxSocketImg}}> </ion-img>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label item-start>Wire enteing into Sub-DB</ion-label>
+        <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="wireentersubdb()"></ion-icon>
+        <ion-img item-end  src={{wireentersubdbImg}}> </ion-img>
+      </ion-item>
+      <br>
+
+
+      
+  <ion-label item-start style="margin-left: 18px;"><b>Capture Close-up View</b></ion-label><br>
+
+  <ion-item>
+    <ion-label item-start>Wire specification of DB</ion-label>
+    <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="wirespecdb()"></ion-icon>
+    <ion-img item-end  src={{wirespecdbImg}}> </ion-img>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label item-start>Wire specification of Sub-DB</ion-label>
+    <ion-icon name="camera" style="font-size: 250%;padding-right: 20px;" (click)="wirespecsubdb()"></ion-icon>
+    <ion-img item-end  src={{wirespecsubdbImg}}> </ion-img>
+  </ion-item>
+  
+
+  </form>
+ </div>
+</ion-content>
